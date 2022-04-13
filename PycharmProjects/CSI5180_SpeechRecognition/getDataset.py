@@ -12,8 +12,6 @@ def formatDataset():
             label = fn.split('_')[-1]
             label = label.split('.')[0]
             labels.append(label.lower())
-        if len(paths) == 2800:
-            break
     print(len(paths))
     print(labels[:5])
     return "Dataset is loaded", paths, labels
@@ -33,9 +31,8 @@ def head(dataframe):
 def valueCounts(dataframe):
     return dataframe['label'].value_counts()
 
-
 # Debug:
-#status, paths_, labels_ = formatDataset()
-#dframe = createDF(paths_, labels_)
-#print(head(dframe))
-#print(valueCounts(dframe))
+# status, paths_, labels_ = formatDataset()
+# dframe = createDF(paths_, labels_)
+# print(head(dframe))
+# print(valueCounts(dframe))
